@@ -14,7 +14,7 @@ def home(request,c_slug=None):
     paginator = Paginator(prodt,6)
     try:
         page = int(request.GET.get('page','1'))
-    except:
+    except():
         page = 1
     try:
         pro = paginator.page(page)

@@ -51,12 +51,17 @@ hr {
   <div class="container">
   <center>  <h1> LOGIN</h1> </center>
       <label> Username: </label>
-      <input type="text" name="username" placeholder="Username" size="15" required />
+      <input type="text" name="USERNAME" placeholder="Username" size="15" required />
       <label><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="password1" required>
+      <input type="password" placeholder="Enter Password" name="password" required>
       <button type="submit" class="registerbtn">Login</button>
   </div>
 </form>
+<div>
+    {% for message in messages %}
+    <h4>{{message}}</h4>
+    {% endfor %}
+</div>
 </body>
 </html>
 {% endblock %}

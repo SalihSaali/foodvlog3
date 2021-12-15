@@ -4,6 +4,6 @@ from.import views
 
 urlpatterns = [
     path('Register',views.register,name='Register'),
-    path('Login',views.login,name='Login'),
-    path('Logout',views.logout,name='Logout'),
+    path('Login',views.login_view,name='Login'),
+    path('Logout',views.logout_view,name='Logout'),
     ]
