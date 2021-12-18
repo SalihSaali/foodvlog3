@@ -35,9 +35,9 @@ def login_view(request):
     if request.method=="POST":
         username = request.POST['USERNAME']
         password = request.POST['password']
-        user = authenticate(request,username=username,password=password)
+        user = auth.authenticate(request,username=username,password=password)
         if user is not None:
-            login(request,user)
+            auth.login(request,user)
             return redirect('/')
         else:
             messages.info(request,'Invalid details,try again')
@@ -47,5 +47,5 @@ def login_view(request):
 
 
 def logout_view(request):
-    logout(request)
+    auth.logout(request)
     return redirect('/')
